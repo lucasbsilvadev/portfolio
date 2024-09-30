@@ -1,6 +1,9 @@
 .skills {
     background-color: var(--light-tertiary-color);
     scroll-margin-top: 15rem;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden; /* Evita que elementos com animação se expandam além da tela */
 }
 
 .skills .skills__content {
@@ -11,17 +14,40 @@
 .skills .skills__content .description {
     max-width: 56rem;
     margin: 0 auto 6rem;
+    font-size: 1.4rem;
+    color: var(--secondary-text-color); /* Tom mais suave para melhor contraste */
+    line-height: 1.8; /* Melhor espaçamento entre as linhas */
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada suave */
 }
 
 .skills .skills__content ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, mixmax(25rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills .skills__content ul li {
+    position: relative;
+    background-color: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves */
+    opacity: 0;
+    animation: fadeUp 1s forwards ease-in-out; /* Animação de entrada vinda de baixo */
+    animation-delay: calc(var(--index) * 0.1s); /* Pequeno atraso entre cada skill para um efeito visual mais agradável */
+}
+
+.skills .skills__content ul li:hover {
+    transform: translateY(-1rem); /* Leve elevação ao hover */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* Sombra mais forte ao hover */
 }
 
 .skills .skills__content ul li .image-container {
     background-color: var(--white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 50%;
     width: 7rem;
     height: 7rem;
@@ -29,11 +55,57 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.skills .skills__content ul li .image-container img {
+    width: 100%;
+    height: auto;
 }
 
 .skills .skills__content ul li h3 {
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    font-weight: 600;
     margin: 2rem 0 1rem;
+    color: var(--primary-color);
+}
+
+.skills .skills__content ul li p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--secondary-text-color); /* Cor de texto suave */
+}
+
+/* Animações */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Começa 20px abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Anima até a posição original */
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .skills .skills__content ul {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 1.5rem;
+    }
+
+    .skills .skills__content ul li {
+        padding: 2rem;
+    }
 }

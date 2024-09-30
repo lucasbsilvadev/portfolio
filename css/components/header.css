@@ -1,57 +1,116 @@
+/* Estilização geral do header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
     scroll-margin-top: 20rem;
+    padding: 2rem 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
+header.active {
+    background-color: #e0e0e0;
+}
+
+/* Animação suave de entrada do conteúdo da esquerda */
 header .header__left {
     max-width: 62rem;
     flex: 1;
+    animation: fadeInUp 0.8s ease-in-out;
 }
-header .header__left p{
+
+header .header__left h1 {
+    color: #333;
+    font-size: 2rem;
+    animation: fadeInUp 1s ease-in-out; /* Animação de entrada */
+}
+
+header .header__left p {
     margin-top: 2rem;
     margin-bottom: 4rem;
     max-width: 50rem;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease-in-out; /* Animação de fade */
 }
 
-header .header_right .header__image {
+/* Estilização da direita */
+header .header__right {
+    flex: 1;
+}
+
+/* Imagem com efeito hover e parallax */
+header .header__right .header__image {
     position: relative;
     line-height: 0;
+    max-width: 25rem;
+    transition: transform 0.3s ease-in-out;
 }
 
-header .header__right .header__image::after {
-    content: '';
-    display: block;
+header .header__right .header__image:hover {
+    transform: scale(1.05); /* Aumento no hover */
+}
+
+/* Efeito parallax na imagem */
+header .header__right .header__image .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    border: 1px solid var(--tertiary-color);
-    top: -1.5rem;
-    right: -1.5rem;
-    border-radius: 0.5rem;
-    z-index: -1;
+    object-fit: cover;
+    transform: translateZ(0);
+    transition: transform 0.5s ease-out;
 }
 
-header .header__right .header__image .lucas {
-    border-radius: 0.5rem;
-    min-width: 25rem;
-    max-width: 100%;
-}
-
+header .header__right .header__image .lucas,
 header .header__right .header__image .background {
     border-radius: 0.5rem;
-    min-width: 25rem;
-    max-width: 100%;
-    z-index: -1;
+    width: 100%;
+    height: auto;
 }
 
+/* Animações para o conteúdo */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Ajustes para dispositivos móveis */
 @media only screen and (max-width: 768px) {
     header {
         flex-direction: column-reverse;
         text-align: center;
     }
-    header .header__left p{
+
+    header .header__left p {
         margin: 2rem auto 4rem;
+    }
+
+    header .header__left h1 {
+        font-size: 1.8rem;
+    }
+
+    header .header__right .header__image {
+        max-width: 20rem;
     }
 }

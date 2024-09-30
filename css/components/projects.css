@@ -1,3 +1,4 @@
+/* Seção de Projetos */
 .projects {
     margin-bottom: 16rem;
     scroll-margin-top: 15rem;
@@ -9,51 +10,78 @@
     margin: 0 auto 6rem;
 }
 
+/* Estilização dos itens do projeto */
 .projects ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
+/* Inverter ordem dos projetos com classe reversa */
 .projects ul li.projects__reversed-list {
-   flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
+/* Espaçamento entre itens */
 .projects ul li:not(:last-of-type) {
     margin-bottom: 12rem;
 }
 
+/* Efeitos ao passar o mouse nos projetos */
+.projects ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo das imagens dos projetos */
 .projects ul li .image img {
     width: 100%;
     min-width: 40rem;
     max-width: 47rem;
     height: auto;
+    transition: transform 0.3s ease;
 }
 
+.projects ul li:hover .image img {
+    transform: scale(1.05); /* Efeito de zoom na imagem ao hover */
+}
+
+/* Informações do projeto */
 .projects ul li .projects__info {
     max-width: 47rem;
+    transition: opacity 0.3s ease;
 }
 
-.projects ul li .projects__info p {
-    margin: 1rem 0 4rem;
-}
-
-.projects ul li .projects__info p {
+/* Links de "Leia mais" */
+.projects ul li .projects__info a {
     font-weight: 500;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.projects ul li .projects__info a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
+/* Ajustes para telas menores */
 @media only screen and (max-width: 768px) {
     .projects ul li,
     .projects ul li.projects__reversed-list {
         flex-direction: column;
-    
     }
+
     .projects ul li .projects__info {
         max-width: 66rem;
     }
+
     .projects ul li .image img {
-        min-width: auto; 
+        min-width: auto;
     }
 }

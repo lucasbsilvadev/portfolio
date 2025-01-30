@@ -1,3 +1,32 @@
+:root {
+  --primary-color: #222;
+  --secondary-color: #555;
+  --primary-background-color: #fff;
+  --dark-secondary-color: #333;
+  --light-tertiary-color: #f5f5f5;
+  --white: #ffffff;
+  --light-text: #f9f9f9;
+  --dark-text: #222;
+}
+
+/* Tema Escuro */
+.dark-mode {
+  --primary-color: #ffffff;
+  --secondary-color: #bbb;
+  --primary-background-color: #121212;
+  --dark-secondary-color: #444;
+  --light-tertiary-color: #1e1e1e;
+  --white: #222;
+  --light-text: #f9f9f9;
+  --dark-text: #222;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 /* Reset e Base */
 * {
   margin: 0;
@@ -220,7 +249,6 @@ p, .p {
   font-weight: 400;
 }
 
-
 /* Projetos */
 .projects__info a {
   color: var(--primary-color);
@@ -233,4 +261,59 @@ p, .p {
 /* Footer */
 .footer__contact span {
   display: block;
+}
+
+/* Modo Escuro */
+.dark-mode {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+/* Ajustes específicos para modo escuro em seções */
+/* Header no Modo Escuro - Texto Preto */
+.dark-mode .navbar,
+.dark-mode .header__image .background {
+  background-color: #121212;
+}
+
+.dark-mode .navbar__links a {
+  color: var(--dark-text);
+}
+
+/* Sobre */
+.dark-mode .about h2,
+.dark-mode .about p {
+  color: #ffffff; /* Cor do texto na seção 'About' no modo escuro */
+}
+
+.dark-mode .about {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .skills {
+  background-color: #333;
+}
+
+.dark-mode .skills .skills__content {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .skills .skills__content h3,
+.dark-mode .skills .skills__content p {
+  color: #ddd;
+}
+
+.dark-mode .projects__info a {
+  color: #f9f9f9;
+}
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #f9f9f9;
+}
+
+.dark-mode .footer .footer__contact,
+.dark-mode .footer .footer__content {
+  color: #bbb;
 }

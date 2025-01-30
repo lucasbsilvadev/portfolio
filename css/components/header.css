@@ -74,6 +74,9 @@ header .header__right .header__image .background {
     height: auto;
 }
 
+header .header__left p {
+    color: #333;
+}
 /* Animações para o conteúdo */
 @keyframes fadeInUp {
     0% {

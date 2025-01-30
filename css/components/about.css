@@ -1,47 +1,45 @@
+/* Seção "About" */
 .about {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
     scroll-margin-top: 20rem;
-    padding: 2rem 1rem; /* Adiciona padding */
-    background-color: #f9f9f9; /* Fundo leve para destacar a seção */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 2rem 1rem;
+    background-color: var(--light-tertiary-color); /* Fundo claro para se destacar no modo escuro */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about h2 {
-    margin-bottom: 1rem; /* Espaçamento inferior */
-    color: #333; /* Cor do texto */
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Cor mais visível para o título */
 }
 
 .about .about__left p {
     max-width: 40rem;
     flex: 1;
     margin: 1rem 0 2rem;
-}
-
-.about .about__left p {
-    margin-left: -1.2rem; /* Remover se não necessário */
+    color: var(--secondary-color); /* Cor do texto para melhor contraste */
 }
 
 .about .about__left ul {
-    list-style: none; /* Remove o estilo padrão da lista */
-    padding: 0; /* Remove o padding padrão */
+    list-style: none;
+    padding: 0;
 }
 
 .about .about__left ul li {
     display: inline-block;
-    margin-right: 1rem; /* Espaçamento entre ícones */
+    margin-right: 1rem;
 }
 
 .about .about__left ul a {
     display: inline-block;
-    padding: 0.5rem; /* Ajusta o padding */
-    transition: transform 0.3s; /* Animação suave */
+    padding: 0.5rem;
+    transition: transform 0.3s;
 }
 
 .about .about__left ul a:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+    transform: scale(1.1);
 }
 
 .about .about__right {
@@ -50,20 +48,26 @@
 }
 
 .about .about__right h3 {
-    margin-bottom: 0.5rem; /* Espaçamento inferior */
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Cor ajustada */
 }
 
 .about .about__right p {
-    line-height: 1.6; /* Melhora a legibilidade */
+    line-height: 1.6;
+    color: var(--secondary-color); /* Cor ajustada */
 }
 
-@media only screen and (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem; /* Ajusta o padding para dispositivos menores */
-    }
-    .about .about__left, .about .about__right {
-        max-width: 100%; /* Adapta a largura para dispositivos menores */
-    }
+/* Modo escuro */
+.dark-mode .about {
+    background-color: var(--dark-secondary-color); /* Fundo escuro para modo dark */
+}
+
+.dark-mode .about h2 {
+    color: #333; /* Título em branco no modo escuro */
+}
+
+.dark-mode .about .about__left p,
+.dark-mode .about .about__right p,
+.dark-mode .about__left .secondary-title {
+    color: #ffffff; /* Texto branco no modo escuro */
 }

@@ -105,6 +105,37 @@
     color: var(--secondary-color);
     background-color: var(--light-gray);
 }
+/* Estilo para o botão de Dark Mode */
+#toggleDarkModeBtn {
+    background-color: var(--primary-color); /* Cor de fundo do botão */
+    color: var(--white); /* Cor do texto */
+    border: 2px solid var(--primary-color); /* Borda do botão */
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Estilo do botão de Dark Mode ao passar o mouse */
+#toggleDarkModeBtn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+}
+
+/* Quando o Dark Mode estiver ativo */
+body.dark-mode #toggleDarkModeBtn {
+    background-color: var(--secondary-color); /* Fundo do botão no dark mode */
+    color: var(--white); /* Cor do texto no dark mode */
+    border-color: var(--secondary-color); /* Borda no dark mode */
+}
+
+body.dark-mode #toggleDarkModeBtn:hover {
+    background-color: var(--primary-color); /* Fundo ao passar o mouse no dark mode */
+    border-color: var(--primary-color); /* Borda ao passar o mouse no dark mode */
+}
+
 
 /* Responsividade */
 @media only screen and (max-width: 768px) {

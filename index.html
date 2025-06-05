@@ -46,9 +46,9 @@
     <header id="header" class="max-width">
         <div class="header__left">
             <h1>Olá! Sou Lucas Barbosa, Desenvolvedor Web</h1>
-            <p>Sou um jovem desenvolvedor, finalizando o curso de Análise e Desenvolvimento de Sistemas. Na faculdade obtive diversos conhecimentos em JAVA, 
-                aprendendo noções de Lógica de Programação, Programação Orientada a Objetos (POO) e Estruturas de Dados. 
-                Atualmente estou aprimorando meus conhecimentos no desenvolvimento de API's, usando Node, React e MySQL</p>
+            <p>Tenho 21 anos, moro em Brasília - DF, e no momento estou aprimorando minhas skills no desenvolvimento de aplicações web,
+                responsivas e escaláveis com o uso de React, Node e MySQL. 
+            </p>
             <a href="#about" class="btn btn-primary">Saiba mais!</a>
         </div>
         <div class="header__right">
@@ -70,43 +70,87 @@
             </ul>
         </div>
         <div class="about__right">
-            <h3 class="tertiary-title mb-m">Desenvolvedor Web</h3>
-            <p> Durante o curso de análise e desenvolvimento, participei de um projeto de agendamento de consultas para o CAC (Centro de Atendimento Comunitário do UNICEUB), 
-                onde fui responsável pelo Banco de Dados (MySQL) e o Back-End no desenvolvimento da API, e das funções de agendamento, autenticação, etc.
-            A partir daí comecei a me interessar e desenvolver aplicações Web.  </p>
+            <h3 class="tertiary-title mb-m">Experiência Prática</h3>
+            <p> 
+                Estagiei no Instituto Brasília Ambiental, onde aprendi muito sobre o desenvolvimento de aplicações geoespaciais, análise e tratamento de dados, além do entendimento das necessidades dos usuários dos softwares.
+                Lá utilizei ArcGIS, Python e Business Intelligence.
+                Também sou muito entusiasmado na utilização de boas práticas de desenvolvimento e gosto sempre de me atualizar com as novas tendências do universo Tech.
+                </p>
         </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="skills">
-        <div class="skills__content max-width">
-            <h2 class="tertiary-title">Minhas Habilidades</h2>
-            <p class="description">Conheça as habilidades e competências que desenvolvi na minha jornada como desenvolvedor:</p>
-            <ul>
+   <section id="skills" class="skills">
+    <div class="skills__content max-width">
+        <h2 class="tertiary-title">Minhas Habilidades</h2>
+        <p class="description">Conheça as habilidades e competências que desenvolvi na minha jornada como desenvolvedor:</p>
+        
+        <div class="skills__grid-container">
+            <ul class="skills__grid">
                 <li class="skills__item">
                     <div class="image-container">
-                        <img src="assets/notebook.png" alt="Desenvolvimento Web">
+                        <img src="assets/react.png" alt="React">
                     </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Experiência em desenvolvimento de sistemas e aplicações com React, Node, e JAVA.</p>
+                    <h3>React</h3>
+                    <p>Utilização de React no desenvolvimento de interfaces web</p>
                 </li>
+                
+                 <li class="skills__item">
+                    <div class="image-container">
+                        <img src="assets/node.png" alt="Node.js">
+                    </div>
+                    <h3>Node</h3>
+                    <p>Criação de API's e operações CRUD para software.</p>
+                </li>
+
                 <li class="skills__item">
                     <div class="image-container">
-                        <img src="assets/colors.png" alt="Web Design">
+                        <img src="assets/mysql.png" alt="MySQL">
                     </div>
-                    <h3>Web Design</h3>
+                    <h3>MySQL</h3>
+                    <p>Utilização do MySQL para Bancos de Dados. Armazenamento, segurança e gerenciamento de dados.</p>
+                </li>
+             
+                   <li class="skills__item">
+                    <div class="image-container">
+                        <img src="assets/py.png" alt="Python">
+                    </div>
+                    <h3>Python</h3>
+                    <p>Competência em Python para análise, tratamento e gerenciamento de dados.</p>
+                </li>
+             
+                <li class="skills__item">
+                    <div class="image-container">
+                        <img src="assets/git.png" alt="Git">
+                    </div>
+                    <h3>Git</h3>
+                    <p>Utilização de ferramentas como GitHub para versionamento de código.</p>
+                </li>
+              
+                <li>
+                <div class="image-container">
+                    <img src="/assets/scrum.png" alt="scrum">
+                </div>
+                <h3>SCRUM</h3>
+                <p>Conceitos de metodologias ágeis envolvendo boas práticas, modelo iterativo. </p>
+            </li>
+                  <li class="skills__item">
+                    <div class="image-container">
+                        <img src="assets/colors.png" alt="UX/UI Design">
+                    </div>
+                    <h3>UX/UI</h3>
                     <p>Competência na criação de layouts atraentes e funcionais.</p>
                 </li>
-                <li class="skills__item">
+                      <li class="skills__item">
                     <div class="image-container">
-                        <img src="assets/database.png" alt="Banco de Dados">
+                        <img src="assets/devops.png" alt="DevOps">
                     </div>
-                    <h3>Banco de Dados</h3>
-                    <p>Experiência com bancos de dados como MySQL.</p>
+                    <h3>DevOps</h3>
+                    <p>Conceitos de DevOps como entrega contínua, automação de processos, gerenciamento de ambientes (teste, produção, homologação, etc)</p>
                 </li>
             </ul>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Projetos -->
     <section id="projects" class="projects max-width">
@@ -117,11 +161,20 @@
         <ul>
             <li class="projects__reversed-list">
                 <div class="image">
-                    <img src="assets/crud2.png" alt="Loja Virtual">
+                    <img src="assets/transaction.png" alt="Loja Virtual">
                 </div>
                 <div class="projects__info">
-                    <h3>Back-End CRUD (repositório)</h3>
-                    <a href="https://gitlab.com/bsilvalucasdev/backend_crud">Leia mais &rarr;</a>
+                    <h3>Desafio Técnico - HUB XP - crud de transações</h3>
+                    <a href="https://github.com/lucasbsilvadev/hub_xp">Leia mais &rarr;</a>
+                </div>
+            </li>
+            <li class="projects__reversed-list">
+                <div class="image">
+                    <img src="assets/commercep1.png" alt="Loja Virtual">
+                </div>
+                <div class="projects__info">
+                    <h3>E-commerce - Depósito de Bebidas </h3>
+                    <a href="deposito-bebidas.vercel.app">Leia mais &rarr;</a>
                 </div>
             </li>
             <li class="projects__reversed-list">

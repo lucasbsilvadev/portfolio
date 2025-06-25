@@ -3,7 +3,7 @@
 <head>
     <!-- Meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
     <meta name="description" content="Portfólio de Lucas Barbosa, desenvolvedor back-end especializado em React e Node. Veja meus projetos e habilidades.">
     <!-- Título -->
     <title>Lucas Barbosa - Portfólio</title>
@@ -15,8 +15,22 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+    <div class="loader"></div>
+    </div>
+
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+
+    <!-- partículas animadas -->
+    <canvas id="particles-bg"></canvas>
+
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar scroll-reveal">
         <div class="navbar__content max-width mb-0">
             <a href="/">
                 <img src="assets/logo.svg" alt="Lucas Barbosa">
@@ -43,9 +57,9 @@
     </nav>
 
     <!-- Header -->
-    <header id="header" class="max-width">
+    <header id="header" class="max-width scroll-reveal">
         <div class="header__left">
-            <h1>Olá! Sou Lucas Barbosa, Desenvolvedor Web</h1>
+            <h1 class="typing"></h1>
             <p>Tenho 21 anos, moro em Brasília - DF, graduado em Análise e Desenvolvimento de Sistemas e atualmente me preparando para iniciar pós-graduação em Data Science e Inteligência Artificial. 
             </p>
             <a href="#about" class="btn btn-primary">Saiba mais!</a>
@@ -59,7 +73,7 @@
     </header>
 
     <!-- Sobre -->
-    <section id="about" class="about max-width">
+    <section id="about" class="about max-width scroll-reveal">
         <div class="about__left">
             <h2 class="secondary-title">Networking</h2>
             <a>Conecte-se comigo nas redes sociais:</a>
@@ -79,7 +93,7 @@
         </div>
     </section>
 
-   <section id="skills" class="skills">
+   <section id="skills" class="skills scroll-reveal">
     <div class="skills__content max-width">
         <h2 class="tertiary-title">Minhas Habilidades</h2>
         <p class="description">Conheça as habilidades e competências que desenvolvi na minha jornada como desenvolvedor:</p>
@@ -153,7 +167,7 @@
 </section>
 
     <!-- Projetos -->
-    <section id="projects" class="projects max-width">
+    <section id="projects" class="projects max-width scroll-reveal">
         <div class="projects__content">
             <h2 class="secondary-title">Projetos em Destaque</h2>
             <p>Confira alguns dos projetos que desenvolvi:</p>
@@ -200,7 +214,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <div class="footer__content max-width mb-0">
+        <div class="footer__content max-width mb-0 scroll-reveal">
             <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
             <div class="footer__contact mb-m">
                 <span class="mb-m">lucas.bsilva@gmail.com</span>
@@ -217,5 +231,8 @@
     
     <!-- Script -->
     <script src="scripts/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 </body>
+
 </html>

@@ -7,13 +7,13 @@
     z-index: 10;
     background-color: var(--white);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: none; /* Inicialmente sem sombra */
+    box-shadow: none; 
 }
 
 /* Navbar ao rolar a página */
 .navbar.active {
     background-color: var(--light-gray); /* Troca o fundo ao rolar a página */
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Sombra ao rolar */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); 
 }
 
 .navbar .navbar__content {
@@ -25,7 +25,7 @@
 }
 
 .navbar.active .navbar__content {
-    padding: 1.5rem 4rem 1rem; /* Diminui o padding ao rolar a página */
+    padding: 1.5rem 4rem 1rem; 
 }
 
 /* Links da navbar */

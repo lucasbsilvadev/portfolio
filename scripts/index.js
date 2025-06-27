@@ -136,10 +136,44 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// Aplica Tilt nos cards
+// Tilt nos cards
 VanillaTilt.init(document.querySelectorAll(".skills__item, .projects__reversed-list"), {
   max: 15,
   speed: 400,
   glare: true,
   "max-glare": 0.3
+});
+
+// Modal de Skills
+const skillModal = document.getElementById('skill-modal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalClose = document.getElementById('modal-close');
+
+const skillItems = document.querySelectorAll('.skills__item');
+
+skillItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img').src;
+    const title = item.querySelector('h3').textContent;
+    const desc = item.querySelector('p').textContent;
+
+    modalImg.src = img;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+
+    skillModal.classList.remove('hidden');
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  skillModal.classList.add('hidden');
+});
+
+// Fecha ao clicar fora
+window.addEventListener('click', (e) => {
+  if (e.target === skillModal) {
+    skillModal.classList.add('hidden');
+  }
 });

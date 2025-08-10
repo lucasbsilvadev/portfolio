@@ -124,14 +124,14 @@ p, .p {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 body.dark-mode #particles-bg {
   filter: brightness(10) contrast(1.5);
 }
 
-body {
+/* body {
    cursor: url('/assets/cursor-test.png') 16 16, auto;
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -140,7 +140,7 @@ body {
   line-height: 1.6;
   margin-top: 15rem;
   transition: background var(--transition-fast), color var(--transition-fast);
-}
+} */
 
 
 ::-webkit-scrollbar {
@@ -287,4 +287,43 @@ footer ul li a:hover {
   color: var(--color-accent);
   cursor: pointer;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* reduz ligeiramente base para evitar fontes exageradas */
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .secondary-title {
+    font-size: 3rem;
+  }
+
+  .tertiary-title {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+
+  p, .p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  .max-width {
+    padding: 0 2rem;
+    margin-bottom: 12rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .btn-primary {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
 }

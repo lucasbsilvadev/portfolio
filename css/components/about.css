@@ -71,3 +71,35 @@
 .dark-mode .about__left .secondary-title {
     color: #ffffff; /* Texto branco no modo escuro */
 }
+
+/* Responsividade da seção About */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* empilha os elementos */
+    align-items: center; /* centraliza o conteúdo */
+    text-align: center; /* melhora o alinhamento do texto */
+    gap: 2rem; /* reduz o espaçamento */
+    padding: 2rem 1rem;
+  }
+
+  .about__left,
+  .about__right {
+    max-width: 100%;
+  }
+
+  .about__left ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .about__right p {
+    text-align: justify; /* melhora leitura em telas pequenas */
+    font-size: 0.95rem;
+  }
+
+  .about h2,
+  .about h3 {
+    text-align: center;
+  }
+}
